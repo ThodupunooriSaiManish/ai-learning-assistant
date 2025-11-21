@@ -1,0 +1,253 @@
+/* ============================
+   GLOBAL THEME VARIABLES
+============================ */
+:root {
+  --bg: linear-gradient(135deg, #e3f2ff, #ffffff);
+  --card-bg: rgba(255, 255, 255, 0.55);
+  --text: #111;
+  --border: rgba(255, 255, 255, 0.4);
+  --shadow: rgba(0, 0, 0, 0.1);
+  --primary: #6366f1;
+}
+
+/* DARK MODE */
+.dark {
+  --bg: linear-gradient(135deg, #0f172a, #1e293b);
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --text: #f1f5f9;
+  --border: rgba(255, 255, 255, 0.15);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --primary: #818cf8;
+}
+/* Global styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f3f4f6;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* App container */
+.app {
+  max-width: 1200px;
+  margin:  auto;
+  padding: 20px 10px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #4338ca;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+
+/* Card Container */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease-in-out;
+  border: 1px solid #ececec;
+  height: auto;
+  box-sizing: border-box;
+}
+
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Inputs */
+textarea,
+input,
+select {
+  width: 100%;
+    box-sizing: border-box;
+
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #d8d8d8;
+  font-size: 15px;
+  background: #fafafa;
+  transition: 0.2s;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Buttons */
+button {
+  margin-top: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.25s;
+}
+
+button:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* Output */
+.output {
+  margin-top: 16px;
+  padding: 14px;
+  background: #fdfdfd;
+  white-space: pre-wrap;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 35px;
+  padding: 12px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === Dark mode === */
+:root {
+  --bg-start: #eef2ff;
+  --bg-end: #f8fafc;
+  --text: #1a1a1a;
+  --card-bg: rgba(255,255,255,0.75);
+  --primary: #6366f1;
+  --muted: #6b7280;
+}
+
+.ui-dark {
+  --bg-start: #0f172a;
+  --bg-end: #111827;
+  --text: #e6eef8;
+  --card-bg: rgba(255,255,255,0.04);
+  --primary: #8b95ff;
+  --muted: #cbd5e1;
+}
+
+body {
+  background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  color: var(--text);
+  transition: background 300ms ease, color 200ms ease;
+}
+
+/* make cards follow theme via CSS variables (safe if your .tool-card uses background etc.) */
+.tool-card {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* === Glass navbar + footer === */
+.main-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 14px 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.6));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.main-footer {
+  margin-top: 30px;
+  padding: 18px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.55));
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+}
+
+/* === Floating Action Button === */
+.fab {
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#6366f1,#8b95ff);
+  color: white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 8px 30px rgba(99,102,241,0.2);
+  cursor: pointer;
+  z-index: 1300;
+}
+.fab:hover { transform: translateY(-3px); }
+
+/* === Tabs === */
+.tabs {
+  display:flex;
+  gap:8px;
+  margin-bottom: 18px;
+}
+
+.tab-btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: 180ms;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg,#6366f1,#8b95ff);
+  color: white;
+  transform: translateY(-4px);
+}
+.tab-content {
+  animation: fadeIn 350ms ease;
+}
+

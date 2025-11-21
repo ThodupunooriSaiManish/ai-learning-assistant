@@ -1,0 +1,149 @@
+/* Global styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f7f8fc;
+  color: #1a1a1a;
+}
+
+/* Page container */
+.page-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* Section titles */
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* Card style for all tools */
+.tool-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.07);
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.tool-card:hover {
+  box-shadow: 0px 6px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+  background: #fdfdfd;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Buttons */
+.button-primary {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.button-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* Secondary button */
+.button-secondary {
+  background: #0ea5e9;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.button-secondary:hover {
+  opacity: 0.9;
+}
+
+/* Header top nav */
+.header {
+  width: 100%;
+  padding: 18px 25px;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4338ca;
+}
+
+/* Navigation bar */
+.nav-menu {
+  margin-top: 18px;
+  background: white;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-radius: 14px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.nav-button {
+  padding: 10px 14px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-button:hover {
+  background: #e2e8f0;
+}
+
+.nav-active {
+  background: #6366f1;
+  color: white;
+}
+
+/* Smooth animations */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
