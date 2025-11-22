@@ -251,3 +251,12 @@ body {
   animation: fadeIn 350ms ease;
 }
 
+a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

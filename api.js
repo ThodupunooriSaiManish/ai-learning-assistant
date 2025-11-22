@@ -26,3 +26,8 @@ export async function generateStudyPlan(goal, days = 7, level = "beginner") {
   const res = await axios.post(`${API_BASE}/api/study-plan`, { goal, days, level });
   return res.data;
 }
+
+export async function getResources(topic) {
+  const res = await axios.post(`${API_BASE}/api/resources`, { topic });
+  return res.data;
+}

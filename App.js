@@ -7,6 +7,7 @@ import Notes from "./components/Notes";
 import Summarizer from "./components/Summarizer";
 import Quiz from "./components/Quiz";
 import StudyPlan from "./components/StudyPlan";
+import ResourceFinder from "./components/ResourceFinder";
 // ==============================================================================
 
 
@@ -85,6 +86,7 @@ function App() {
           <section className="card"><Quiz /></section>
           <section className="card"><StudyPlan /></section>
           <section className="card"><DocSummarizer /></section>
+          <section className="card"><ResourceFinder /></section>
 
         </div>
       </main>
